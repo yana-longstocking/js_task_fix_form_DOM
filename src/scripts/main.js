@@ -1,6 +1,6 @@
 'use strict';
 
-const inputs = document.querySelectorAll('input');
+const inputs = document.querySelectorAll('form input');
 
 inputs.forEach((input) => {
   const label = document.createElement('label');
@@ -9,9 +9,7 @@ inputs.forEach((input) => {
   label.setAttribute('for', input.id);
   label.textContent = input.name;
   input.parentElement.appendChild(label);
-});
 
-inputs.forEach((input) => {
   input.setAttribute(
     'placeholder',
     input.name.charAt(0).toUpperCase() + input.name.slice(1),
